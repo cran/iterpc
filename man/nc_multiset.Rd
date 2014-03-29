@@ -1,0 +1,23 @@
+\name{nc_multiset}
+\alias{nc_multiset}
+\title{Calcuate the number of combinations of a multiset}
+\usage{
+nc_multiset(f, r)
+}
+\arguments{
+  \item{f}{the frequencies of the mutliset}
+
+  \item{r}{the number of object drawn from the multiset}
+}
+\value{
+the number of combinations
+}
+\description{
+Calcuate the number of combinations of a multiset
+}
+\examples{
+x = c("a","a","b")
+# possible combinations of size 2 are "aa" and "ab".
+np_multiset(table(x), 2) # = 2
+}
+

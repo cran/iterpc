@@ -3,9 +3,11 @@ Efficient Iterator for Permutations and Combinations
 
 [![Build Status](https://travis-ci.org/randy3k/iterpc.svg?branch=master)](https://travis-ci.org/randy3k/iterpc)
 
+[![](http://cranlogs.r-pkg.org/badges/grand-total/iterpc)](http://cran.rstudio.com/web/packages/iterpc/index.html)
+
 Package Documentation: [http://randy.city/iterpc](http://randy.city/iterpc)
 
-Github address: [https://github.com/randy3k/iterpc](https://github.com/randy3k/iterpc)
+Github: [https://github.com/randy3k/iterpc](https://github.com/randy3k/iterpc)
 
 
 Description: This package helps in 
@@ -23,11 +25,10 @@ I have to thanks [Martin Broadhurst](http://www.martinbroadhurst.com) and [Alist
 
 ## Installation
 
-If you want to install the latest development version you can use `devtools`:
+If you want to install the latest development version, you can use `devtools`:
 
 ```
-library(devtools)
-install_github("randy3k/iterpc")
+devtools::install_github("randy3k/iterpc")
 ```
 
 or you can install it via CRAN

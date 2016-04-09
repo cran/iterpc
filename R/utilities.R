@@ -12,7 +12,7 @@
 #' multichoose(c(3,1,1))
 #' @export
 multichoose <- function(n){
-    round(exp(lgamma(sum(n)+1)-sum(lgamma(n+1))))
+    round(exp(lgamma(sum(n) + 1) - sum(lgamma(n + 1))))
 }
 
 
@@ -28,13 +28,13 @@ multichoose <- function(n){
 #' @import polynom
 np_multiset <- function(f, r){
     p <- polynomial(1)
-    alpha <- lgamma(r+1)/length(f)
+    alpha <- lgamma(r + 1) / length(f)
     for (i in f){
         j <- pmin(i, r)
-        p <- p * polynomial(exp(c(alpha,alpha-lgamma( (1:j)+1) )))
-        p <- polynomial(p[1:min(length(p),r+1)])
+        p <- p * polynomial(exp(c(alpha, alpha - lgamma( (1:j) + 1 ))))
+        p <- polynomial(p[1:min(length(p), r + 1)])
     }
-    return(round(p[r+1]))
+    return(round(p[r + 1]))
 }
 
 
@@ -52,15 +52,15 @@ nc_multiset <- function(f, r){
     p <- polynomial(1)
     for (i in f){
         p <- p * polynomial(rep.int(1, i + 1))
-        p <- polynomial(p[1:min(length(p),r+1)])
+        p <- polynomial(p[1:min(length(p), r + 1)])
     }
-    return(p[r+1])
+    return(p[r + 1])
 }
 
 #' Wrap iterpc objects by iterators::iter
 #' @param I the iterpc object
 #' @param d number of permutation(s)/combination(s) wanted in each iteration, default to 1
-#' @return a iter object compartible with iterators package
+#' @return a iter object compatible with iterators package
 #' @import iterators
 #' @examples
 #' library(iterators)

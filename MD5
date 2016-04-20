@@ -1,4 +1,4 @@
-287584a70ef84e43102a734861d8cb87 *DESCRIPTION
+7b8dc8961ab058ac6c3fd1f33fd159ef *DESCRIPTION
 90b4660948871229effed06cb92da86c *NAMESPACE
 ebe951fc37afc89b5b2844588d49bade *R/RcppExports.R
 63635abc2409fa5d0357d1ed5e9978c7 *R/combination.R
@@ -18,7 +18,7 @@ e6d9374fc035002715bbc6e3c48c6098 *man/iterpc.Rd
 dc4e4564cab28ce9b0bb33347c3a8c88 *man/multichoose.Rd
 ad9fa307e9116fafeadded5417499166 *man/nc_multiset.Rd
 bfda44abd3dc0393f30e1fded7bb100e *man/np_multiset.Rd
-2b273bf0c3996689debff1187119d272 *src/Makevars
+60864f3d0ba19514426307fda3adb313 *src/Makevars
 1aa46390b1327358f506b80a903ab667 *src/RcppExports.cpp
 2888f2863c93a50c3ef4a0b0107e5d03 *src/combination.cpp
 9c90da27b9067a34c57ca615b9ec3b16 *src/mbcomb/Examples/combinations-elements.c

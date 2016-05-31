@@ -7,16 +7,16 @@ getnext.perm <- function(I, d=1L, drop=TRUE){
     }
     if (I$replace){
         if (I$status == -1L) {
-            I$currInd <- rep(0L, I$r)
+            I$index <- rep(0L, I$r)
         }
         P <- next_permutations_replace(I, d)
     }else{
         if (I$status == -1L) {
             if (I$is.multiset){
                 # add 0L to blame lazy evaluation
-                I$currInd <- I$multiset + 0L
+                I$index <- I$multiset + 0L
             }else{
-                I$currInd <- (1:I$n) - 1L
+                I$index <- (1:I$n) - 1L
             }
         }
         if (I$n == I$r){
@@ -53,22 +53,24 @@ getnext.perm <- function(I, d=1L, drop=TRUE){
 
 #' @export
 #' @method getlength perm
-getlength.perm <- function(I){
+#' @import gmp
+getlength.perm <- function(I, bigz=FALSE){
     if (I$replace){
-        return(I$unique_n^I$r)
+        out <- I$unique_n^I$r
     }else{
         if (I$n == I$r){
             if (I$is.multiset){
-                return(multichoose(I$f))
+                out <- multichoose(I$f, TRUE)
             }else{
-                return(factorial(I$n))
+                out <- factorial(I$n)
             }
         }else{
             if (I$is.multiset){
-                return(np_multiset(I$f, I$r))
+                out <- np_multiset(I$f, I$r, TRUE)
             }else{
-                return(prod(I$n:(I$n - I$r + 1)))
+                out <- prod(I$n:(I$n - I$r + 1))
             }
         }
     }
+    convert_z(out, bigz)
 }

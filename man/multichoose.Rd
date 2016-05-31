@@ -4,10 +4,12 @@
 \alias{multichoose}
 \title{Calculate multinomial coefficient}
 \usage{
-multichoose(n)
+multichoose(n, bigz = FALSE)
 }
 \arguments{
 \item{n}{a vector of group sizes}
+
+\item{bigz}{use gmp's Big Interger}
 }
 \value{
 multinomial coefficient
@@ -16,9 +18,6 @@ multinomial coefficient
 This function calculates the multinomial coefficient
 \deqn{\frac{(\sum n_j)!}{\prod n_j!}.}{(\sum n_j)! / \prod n_j!.}
 where \eqn{n_j}{n_j}'s are the number of multiplicities in the multiset.
-}
-\details{
-The result is not reliable if the retunred value is too large (around 2^53) due to limition of integers.
 }
 \examples{
 # (3+1+1)!/ (3! 1! 1!) = 20

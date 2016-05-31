@@ -7,16 +7,16 @@ getnext.comb <- function(I, d=1L, drop=TRUE){
     }
     if (I$replace){
         if (I$status == -1L) {
-            I$currInd <- rep(0L, I$r)
+            I$index <- rep(0L, I$r)
         }
         C <- next_combinations_replace(I, d)
     }else{
         if (I$status == -1L) {
             if (I$is.multiset){
                 # add 0L to blame lazy evaluation
-                I$currInd <- I$multiset[1:I$r] + 0L
+                I$index <- I$multiset[1:I$r] + 0L
             }else{
-                I$currInd <- (1:I$r) - 1L
+                I$index <- (1:I$r) - 1L
             }
         }
         if (I$is.multiset){
@@ -53,14 +53,16 @@ getnext.comb <- function(I, d=1L, drop=TRUE){
 
 #' @export
 #' @method getlength comb
-getlength.comb <- function(I){
+#' @import gmp
+getlength.comb <- function(I, bigz=FALSE){
     if (I$replace){
-        return(choose(I$unique_n + I$r - 1, I$r))
+        out <- choose(I$unique_n + I$r - 1, I$r)
     }else{
         if (I$is.multiset){
-            return(nc_multiset(I$f, I$r))
+            out <- nc_multiset(I$f, I$r, TRUE)
         }else{
-            return(choose(I$n, I$r))
+            out <- choose(I$n, I$r)
         }
     }
+    convert_z(out, bigz)
 }

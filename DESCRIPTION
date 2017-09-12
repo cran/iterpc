@@ -1,13 +1,12 @@
 Package: iterpc
 Type: Package
 Title: Efficient Iterators for Permutations and Combinations
-Version: 0.3.1
-Date: 2017-08-28
-Author: Randy Lai [aut, cre], Martin Broadhurst [aut]
+Version: 0.3.3
+Date: 2017-09-12
+Author: Randy Lai [aut, cre]
 Maintainer: Randy Lai <randy.cs.lai@gmail.com>
 Authors@R: c(
-    person("Randy", "Lai", , "randy.cs.lai@gmail.com", role = c("aut", "cre")),
-    person("Martin", "Broadhurst", role = "aut")
+    person("Randy", "Lai", , "randy.cs.lai@gmail.com", role = c("aut", "cre"))
     )
 Description: A collection of iterators for generating permutations and combinations with or
     without replacement; with distinct items or non-distinct items (multiset).
@@ -22,11 +21,10 @@ Depends: R (>= 3.0.0)
 Imports: iterators, gmp (>= 0.5-12), Rcpp (>= 0.11.0)
 Suggests: foreach, testthat, knitr, rmarkdown
 LinkingTo: Rcpp
-SystemRequirements: GNU make
 NeedsCompilation: yes
 ByteCompile: yes
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
-Packaged: 2017-08-28 05:09:20 UTC; Randy
+Packaged: 2017-09-12 17:52:08 UTC; randy
 Repository: CRAN
-Date/Publication: 2017-08-28 11:37:13 UTC
+Date/Publication: 2017-09-12 20:41:15 UTC

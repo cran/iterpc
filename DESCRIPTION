@@ -1,20 +1,20 @@
 Package: iterpc
 Type: Package
-Title: Efficient Iterators for Permutations and Combinations
-Version: 0.3.3
-Date: 2017-09-12
+Title: Efficient Iterator for Permutations and Combinations
+Version: 0.3.4
+Date: 2017-12-06
 Author: Randy Lai [aut, cre]
 Maintainer: Randy Lai <randy.cs.lai@gmail.com>
 Authors@R: c(
     person("Randy", "Lai", , "randy.cs.lai@gmail.com", role = c("aut", "cre"))
     )
-Description: A collection of iterators for generating permutations and combinations with or
-    without replacement; with distinct items or non-distinct items (multiset).
-    The generated sequences are in lexicographical order (dictionary order). The
-    algorithms to generate permutations and combinations are memory efficient. These
-    iterative algorithms enable users to process all sequences without putting all
-    results in the memory at the same time. The algorithms are written in C/C++ for
-    faster performances.
+Description: Iterator for generating permutations and combinations. They
+    can be either drawn with or without replacement, or with distinct/ non-distinct 
+    items (multiset). The generated sequences are in lexicographical order 
+    (dictionary order). The algorithms to generate permutations and combinations are 
+    memory efficient. These iterative algorithms enable users to process all sequences 
+    without putting all results in the memory at the same time. 
+    The algorithms are written in C/C++ for faster performance.
 URL: https://randy3k.github.io/iterpc
 License: GPL-2
 Depends: R (>= 3.0.0)
@@ -25,6 +25,6 @@ NeedsCompilation: yes
 ByteCompile: yes
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
-Packaged: 2017-09-12 17:52:08 UTC; randy
+Packaged: 2017-12-06 07:46:23 UTC; Randy
 Repository: CRAN
-Date/Publication: 2017-09-12 20:41:15 UTC
+Date/Publication: 2017-12-06 10:51:56 UTC

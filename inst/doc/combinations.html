@@ -12,7 +12,7 @@
 
 <meta name="author" content="Randy Lai" />
 
-<meta name="date" content="2018-04-23" />
+<meta name="date" content="2018-08-08" />
 
 <title>Examples of generating combinations</title>
 
@@ -22,7 +22,7 @@
 <style type="text/css">
 a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; position: absolute; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -35,13 +35,11 @@ code.sourceCode { white-space: pre-wrap; }
 a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
 pre.numberSource a.sourceLine
-  { position: relative; }
-pre.numberSource a.sourceLine:empty
-  { position: absolute; }
+  { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
   { content: attr(data-line-number);
-    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all;
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -280,7 +278,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 
 <h1 class="title toc-ignore">Examples of generating combinations</h1>
 <h4 class="author"><em>Randy Lai</em></h4>
-<h4 class="date"><em>2018-04-23</em></h4>
+<h4 class="date"><em>2018-08-08</em></h4>
 
 
 
@@ -340,17 +338,13 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <a class="sourceLine" id="cb7-2" data-line-number="2">I &lt;-<span class="st"> </span><span class="kw">iterpc</span>(<span class="kw">table</span>(x), <span class="dv">2</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co"># or I = iterpc(c(2,1,1), 2, label=c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;), replace=TRUE)</span></a>
 <a class="sourceLine" id="cb7-4" data-line-number="4"><span class="kw">getall</span>(I)</a></code></pre></div>
-<pre><code>##       [,1] [,2]
-##  [1,]    1    1
-##  [2,]    1    2
-##  [3,]    1    3
-##  [4,]    1    4
-##  [5,]    2    2
-##  [6,]    2    3
-##  [7,]    2    4
-##  [8,]    3    3
-##  [9,]    3    4
-## [10,]    4    4</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    1
+## [2,]    1    2
+## [3,]    1    3
+## [4,]    2    2
+## [5,]    2    3
+## [6,]    3    3</code></pre>
 
 
 
